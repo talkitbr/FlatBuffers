@@ -1,0 +1,73 @@
+file_identifier "IMV3";
+file_extension "fb";
+
+namespace imobiliaria;
+
+enum Estado : byte { AC, AL, AP, AM, BA, CE, DF, ES, GO, MA, MT, MS, MG, PA, PB, PR, PE, PI, RJ, RN, RS, RO, RR, SC, SP, SE, TO }
+
+enum Tipo: byte { compra, aluguel }
+
+struct Area {
+	largura: float;
+	comprimento: float;
+}
+
+union Vendedor { Corretor, Imobiliaria }
+
+table Imoveis {
+	casas: [Casa];
+	aptos: [Apartamento];
+} 
+
+table Casa {
+	endereco: string;
+	numero: ushort;
+	bairro: string;
+	cidade: string;
+	estado: Estado;
+	areaTerreno: Area (required);
+	areaConstruida: float;
+	quartos: ubyte;
+	tipo: Tipo;
+	valor: float;
+	aceitaFGTS: bool = true;
+	foto: [byte] (deprecated);
+	urlFoto: string;
+	vendedor: Vendedor (required);
+}
+
+table Apartamento {
+	endereco: string;
+	numero: ushort;
+	numApto: ubyte;
+	bairro: string;
+	cidade: string;
+	estado: Estado;
+	area: float;
+	quartos: ubyte;
+	valor: float;
+	valorCondominio: float;
+	tipo: Tipo;
+	aceitaFGTS: bool = true;
+	foto: [byte] (deprecated);
+	urlFoto: string;
+	vendedor: Vendedor (required);
+}
+
+table Corretor {
+	nome: string;
+	telefone: string;
+	creci: string;
+}
+
+table Imobiliaria {
+	nome: string;
+	endereco: string;
+	numero: ushort;
+	bairro: string;
+	cidade: string;
+	estado: Estado;
+	telefone: string;
+}
+
+root_type Imoveis;
