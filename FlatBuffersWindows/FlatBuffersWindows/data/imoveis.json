@@ -1,0 +1,102 @@
+{
+	"aptos": [
+    {
+      "$type":  "FlatBuffersWindows.model.vo.json.ApartamentoJSON, FlatBuffersWindows",
+      "endereco": "Rua 1",
+      "numero": 150,
+      "numApto": 12,
+      "bairro": "Centro",
+      "cidade": "São Paulo",
+      "estado": "SP",
+      "area": 72,
+      "quartos": 3,
+      "valor": 730000,
+      "tipo": "compra",
+      "vendedor": {
+        "$type": "FlatBuffersWindows.model.vo.json.CorretorJSON, FlatBuffersWindows",
+        "nome": "João das Couves",
+        "telefone": "99999-9999",
+        "creci": "abcdef"
+      },
+      "urlFoto": "http://www.fotosdeimoves.com/apto1.jpg"
+    },
+    {
+      "$type":  "FlatBuffersWindows.model.vo.json.ApartamentoJSON, FlatBuffersWindows",
+      "endereco": "Rua A",
+      "numero": 33,
+      "numApto": 55,
+      "bairro": "Centro",
+      "cidade": "Campinas",
+      "estado": "SP",
+      "area": 43,
+      "quartos": 1,
+      "valor": 1200,
+      "tipo": "aluguel",
+      "aceitaFGTS": false,
+      "vendedor": {
+        "$type": "FlatBuffersWindows.model.vo.json.ImobiliariaJSON, FlatBuffersWindows",
+        "nome": "Imobiliária do Tião",
+        "endereco": "Avenida C",
+        "numero": 180,
+        "bairro": "Centro",
+        "cidade": "Campinas",
+        "estado": "SP",
+        "telefone": "98888-8888"
+      },
+      "urlFoto": "http://www.fotosdeimoves.com/apto2.jpg"
+    }
+	],
+	"casas": [
+    {
+      "$type":  "FlatBuffersWindows.model.vo.json.CasaJSON, FlatBuffersWindows",
+      "endereco": "Rua 32",
+      "numero": 568,
+      "bairro": "Jardim Brasil",
+      "cidade": "Joinville",
+      "estado": "SC",
+      "areaTerreno": {
+        "largura": 14,
+        "comprimento": 30
+      },
+      "areaConstruida": 155.50,
+      "quartos": 4,
+      "tipo": "compra",
+      "valor": 530000,
+      "vendedor": {
+        "$type": "FlatBuffersWindows.model.vo.json.ImobiliariaJSON, FlatBuffersWindows",
+        "nome": "Imóveis do Zé",
+        "endereco": "Rua dos Vendedores",
+        "numero": 980,
+        "bairro": "Centro",
+        "cidade": "Florianópolis",
+        "estado": "SC",
+        "telefone": "98999-9999"
+      },
+      "urlFoto": "http://www.fotosdeimoves.com/casa1.jpg"
+    },
+    {
+      "$type":  "FlatBuffersWindows.model.vo.json.CasaJSON, FlatBuffersWindows",
+      "endereco": "Rua C",
+      "numero": 110,
+      "bairro": "Centro",
+      "cidade": "Recife",
+      "estado": "PE",
+      "areaTerreno": {
+        "largura": 20,
+        "comprimento": 40
+      },
+      "areaConstruida": 350,
+      "quartos": 7,
+      "tipo": "aluguel",
+      "valor": 3500,
+      "aceitaFGTS": false,
+      "vendedor": {
+        "$type": "FlatBuffersWindows.model.vo.json.CorretorJSON, FlatBuffersWindows",
+        "nome": "Maria Beterraba",
+        "telefone": "95555-9999",
+        "creci": "zz55pw"
+      },
+      "urlFoto": "http://www.fotosdeimoves.com/casa2.jpg"
+    }
+	]
+}
